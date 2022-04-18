@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@100;300;400;500;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="script-loading.js"></script>
+    <script defer src="script-page1.js"></script>
+
+    <title>Typing Game!</title>
+  </head>
+  <body>
+    <!-- loading -->
+    <div id="preloader">
+      <div class="permit-box hidden">
+        <h1>Turn on the background music？</h1>
+        <div class="permit-btn-boxes">
+          <button class="permit-yes">YES</button>
+          <button class="permit-no">NO</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- loading -->
+    <!-- page1 -->
+    <!-- page1 -->
+    <!-- page1 -->
+    <!-- page1 -->
+    <div class="page page1 hidden">
+      <div class="topper">
+        <h1>Welcome to Erik's game!</h1>
+      </div>
+
+      <header class="title">
+        <div class="first-word-sets">
+          <span class="title-digit">T</span>
+          <span class="title-digit">y</span>
+          <span class="title-digit">p</span>
+          <span class="title-digit">i</span>
+          <span class="title-digit">n</span>
+          <span class="title-digit">g</span>
+        </div>
+        <div class="second-word-sets">
+          <span class="title-digit">G</span>
+          <span class="title-digit">a</span>
+          <span class="title-digit">m</span>
+          <span class="title-digit">e</span>
+          <span class="title-digit">!</span>
+        </div>
+      </header>
+      <div class="btn-container">
+        <button class="btn btn-start">START</button>
+      </div>
+    </div>
+    <!-- page1 -->
+    <!-- page1 -->
+    <!-- page1 -->
+    <!-- page1 -->
+
+    <!-- page2 -->
+    <!-- page2 -->
+    <!-- page2 -->
+    <!-- page2 -->
+    <div class="page page2 hidden">
+      <heder class="page2-header-container">
+        <div class="game-info">
+          <p class="correct">correct</p>
+          <p class="number correct-number">0</p>
+        </div>
+        <div class="game-info">
+          <p class="timmer">timer</p>
+          <p class="number timmer-number">0</p>
+        </div>
+        <div class="game-info">
+          <p class="wrong">wrong</p>
+          <p class="number wrong-number">0</p>
+        </div>
+      </heder>
+      <article class="questions-container">
+        <div class="question-box hidden" data-question="0" data-answer="coffee">
+          <img class="question-img" src="img/coffee.png" />
+        </div>
+        <div
+          class="question-box hidden"
+          data-question="1"
+          data-answer="hambergur"
+        >
+          <img class="question-img" src="img/hambergur.png" />
+        </div>
+        <div class="question-box hidden" data-question="2" data-answer="pie">
+          <img class="question-img" src="img/pie.png" />
+        </div>
+        <div
+          class="question-box hidden"
+          data-question="3"
+          data-answer="sandwich"
+        >
+          <img class="question-img" src="img/sandwich.png" />
+        </div>
+        <div
+          class="question-box hidden"
+          data-question="4"
+          data-answer="sausage"
+        >
+          <img class="question-img" src="img/sausage.png" />
+        </div>
+        <div class="question-box hidden" data-question="5" data-answer="taco">
+          <img class="question-img" src="img/taco.png" />
+        </div>
+        <div class="question-box hidden" data-question="6" data-answer="egg">
+          <img class="question-img" src="img/egg.png" />
+        </div>
+      </article>
+      <div class="input-container">
+        <input class="input-answer" type="text" placeholder="start typing..." />
+      </div>
+    </div>
+    <!-- page2 -->
+    <!-- page2 -->
+    <div class="summary summary-hidden">
+      <h1 class="summary-title">summary</h1>
+      <div class="summary-correct-box">
+        <p>correct</p>
+        <a class="summary-correct">10</a>
+      </div>
+      <div class="summary-wrong-box">
+        <p>wrong</p>
+        <a class="summary-wrong">5</a>
+      </div>
+      <button class="summary-btn">okay</button>
+    </div>
+  </body>
+</html>
