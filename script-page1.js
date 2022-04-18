@@ -149,7 +149,7 @@ function init() {
     if (startTimer === 0) {
       clearInterval(gameCountDown);
       //count Down
-      countDown(10);
+      countDown(60);
       //show first img
       showImages();
       return;

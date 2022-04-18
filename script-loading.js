@@ -7,10 +7,15 @@ const permitBtnNo = document.querySelector('.permit-no');
 const page1 = document.querySelector('.page1');
 const page2 = document.querySelector('.page2');
 //Audio
-const gameWaitingAudio = new Audio('gameWaiting.mp3');
-const gameStartAudio = new Audio('gameStart.mp3');
-const correctAnswer = new Audio('correct.mp3');
-const wrongAnswer = new Audio('wrong.mp3');
+// const gameWaitingAudio = new Audio('gameWaiting.mp3');
+// const gameStartAudio = new Audio('gameStart.mp3');
+// const correctAnswer = new Audio('correct.mp3');
+// const wrongAnswer = new Audio('wrong.mp3');
+const gameWaitingAudio = document.querySelector('.gameWaitingAudio');
+const gameStartAudio = document.querySelector('.gameStartAudio');
+const correctAnswer = document.querySelector('.correctAnswer');
+const wrongAnswer = document.querySelector('.wrongAnswer');
+
 correctAnswer.volume = 0.1;
 wrongAnswer.volume = 0.1;
 gameWaitingAudio.volume = 0.2;
