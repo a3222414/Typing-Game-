@@ -67,17 +67,18 @@ const closeImages = function () {
 
 const checkInput = function () {
   if (newAnswer === dataAnswer[imageIndex]) {
-    correctAnswer.play();
+    correctAudioPlaying();
     correct++;
     correctNumber.textContent = `${correct}`;
     closeImages();
-    showImages();
+    return showImages();
   } else {
-    wrongAnswer.play();
+    wrongAudioPlaying();
+
     wrong++;
     wrongNumber.textContent = `${wrong}`;
     closeImages();
-    showImages();
+    return showImages();
   }
 };
 
@@ -123,6 +124,7 @@ const countDown = function (time) {
     if (timer === 0) {
       gaming = false;
       timerNumber.textContent = '0';
+      inputAnswer.textContent = '';
       resetScores();
       popUpSummary();
 
@@ -137,6 +139,8 @@ const countDown = function (time) {
 function init() {
   //Change Music
   gameStartAudio.play();
+  gameWaitingAudio.loop = false;
+  gameWaitingAudio.currentTime = 0;
   gameWaitingAudio.pause();
   //display page2
   page1.classList.add('hidden');
@@ -167,7 +171,7 @@ document.addEventListener('keydown', function (e) {
 
   if (gaming && key === 'Enter') {
     newAnswer = inputAnswer.value;
-    console.log(newAnswer);
+    // console.log(newAnswer);
 
     checkInput();
 
@@ -176,3 +180,18 @@ document.addEventListener('keydown', function (e) {
     inputAnswer.value = '';
   }
 });
+
+//// Sound effect
+buttons.forEach((button) =>
+  button.addEventListener('click', function () {
+    if (buttonClickSound.duration > 0) buttonClickSound.currentTime = 0;
+    buttonClickSound.play();
+  })
+);
+
+buttons.forEach((button) =>
+  button.addEventListener('mouseenter', function () {
+    if (buttonHoverSound.duration > 0) buttonHoverSound.currentTime = 0;
+    buttonHoverSound.play();
+  })
+);

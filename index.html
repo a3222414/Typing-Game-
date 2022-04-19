@@ -16,13 +16,33 @@
     <script defer src="script-loading.js"></script>
     <script defer src="script-page1.js"></script>
 
-    <title>Typing Game!</title>
+    <title>Typing Game</title>
   </head>
   <body>
-    <audio class="gameStartAudio" src="gamestart.mp3"></audio>
-    <audio class="gameWaitingAudio" src="gameWaiting.mp3"></audio>
-    <audio class="correctAnswer" src="correct.mp3"></audio>
-    <audio class="wrongAnswer" src="gamestart.mp3"></audio>
+    <audio class="gameStartAudio">
+      <source src="gamestart.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="gameWaitingAudio">
+      <source src="gameWaiting.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="correctAnswer">
+      <source src="correct.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="correctAnswer-copy">
+      <source src="correctCopy.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="wrongAnswer">
+      <source src="wrong.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="wrongAnswer-copy">
+      <source src="wrongCopy.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="button-click">
+      <source src="buttonClick.mp3" type="audio/mp3" />
+    </audio>
+    <audio class="button-hover">
+      <source src="hoverSound..mp3" type="audio/mp3" />
+    </audio>
     <!-- loading -->
     <div id="preloader">
       <div class="permit-box hidden">
@@ -76,15 +96,15 @@
     <!-- page2 -->
     <div class="page page2 hidden">
       <heder class="page2-header-container">
-        <div class="game-info">
+        <div class="game-info correct-box">
           <p class="correct">correct</p>
           <p class="number correct-number">0</p>
         </div>
-        <div class="game-info">
+        <div class="game-info timmer-box">
           <p class="timmer">timer</p>
           <p class="number timmer-number">0</p>
         </div>
-        <div class="game-info">
+        <div class="game-info wrong-box">
           <p class="wrong">wrong</p>
           <p class="number wrong-number">0</p>
         </div>
